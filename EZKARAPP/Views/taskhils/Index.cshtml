@@ -1,0 +1,225 @@
+﻿@model IEnumerable<EZKARAPP.Models.taskhil>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gfname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bast)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qadamasli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qadampeli)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taqaroribtidayi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rooz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inwaanbast)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reyasatmarboot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mooyinat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.markaziwalayati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mamoorkaarkon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jinsiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.darajatahseel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reshtatahseel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roobamoqarari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saalmoqarari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.poorkhaali)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saaltawalood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roobarzyaabi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arzyaabiimtehaani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roobarzyaabiimtehaani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tarikharzyaabi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shoomratamaas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nawimaash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.meeqdarmaash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tarikhakhzmaash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maahakhzmaash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.molahezat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gfname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bast)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qadamasli)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qadampeli)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taqaroribtidayi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rooz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inwaanbast)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reyasatmarboot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mooyinat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.markaziwalayati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mamoorkaarkon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jinsiyat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.darajatahseel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reshtatahseel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.roobamoqarari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saalmoqarari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.poorkhaali)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saaltawalood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.roobarzyaabi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arzyaabiimtehaani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.roobarzyaabiimtehaani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tarikharzyaabi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shoomratamaas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nawimaash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.meeqdarmaash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tarikhakhzmaash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maahakhzmaash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.molahezat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

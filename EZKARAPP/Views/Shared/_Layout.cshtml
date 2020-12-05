@@ -1,0 +1,58 @@
+﻿
+@{
+
+    var request = HttpContext.Current.Request;
+
+    var area = request.RequestContext.RouteData.DataTokens["area"];
+
+    //var address = string.Format("{0}://{1}", request.Url.Scheme, request.Url.Authority);
+
+    var url = request.Url.Scheme + "://" + request.Url.Host + (request.Url.IsDefaultPort ? null : ":" + request.Url.Port + "/");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title .::MOEC::.</title>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @if (ViewBag.DataTable == true)
+    {
+        @Styles.Render("~/bundles/datatablecss")
+    }
+
+
+    @RenderSection("head", required: false)
+    <script type="text/javascript">
+        var appUrl = '@url';
+        if (!appUrl.endsWith("/")) {
+            appUrl += "/";
+        }
+        var serviceUrl = appUrl + 'services/';
+    </script>
+</head>
+<body>
+    @Html.Partial("_MenuPartial")
+
+    <div class="container-fluid body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Developed by: EZKAR/MoEc/MIS</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js")
+
+    @if (ViewBag.DataTable == true)
+    {
+        @Scripts.Render("~/bundles/datatablejs")
+    }
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

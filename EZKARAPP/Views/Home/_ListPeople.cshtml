@@ -1,0 +1,149 @@
+﻿@model IEnumerable<EZKARAPP.Models.taskhil>
+
+<div class="" style="min-height:100px">
+    <table dir="rtl" class=" table-responsive  table-smaller table-hover table-striped" id="people-data-table">
+        <thead class="table-bordered">
+            <tr>
+                <th>ارزیایی</th>
+                <th>شماره</th>
+                <th>اسم</th>
+                <th>اسم پدر</th>
+                <th>اسم پدرکلان</th>
+                <th>بست</th>
+                <th>قدم اصلی</th>
+                <th>قدم فعلی</th>
+                <th>تقرر ابتدایی</th>
+                <th>روز</th>
+                <th>ماه</th>
+                <th>سال</th>
+                <th>عنوان بست</th>
+                <th>ریاست مربوط</th>
+                <th>معینت</th>
+                <th>مرکزی ولایتی</th>
+                <th>مامور کارکن</th>
+                <th>جنسیت</th>
+                <th>درجه تحصیل</th>
+                <th>رشته تحصیل</th>
+                <th>ماش</th>
+                <th>ربع مقرری</th>
+                <th>سال مقرری</th>
+                <th>پر خالی</th>
+                <th>سال تولد</th>
+                <th>ربع ارزیابی</th>
+                <th>ارزیابی امتحانی</th>
+                <th>ربع ارزیابی امتحانی</th>
+                <th>تاریخ ارزیابی</th>
+                <th>شماره تماس</th>
+                <th>نوع معاش</th>
+                <th>مقداری معاش</th>
+                <th>تاریخ معاش</th>
+                <th>ماه اخذ معاش</th>
+                <th>ملاحضات</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>ارزیایی</th>
+                <th>شماره</th>
+                <th>اسم</th>
+                <th>اسم پدر</th>
+                <th>اسم پدرکلان</th>
+                <th>بست</th>
+                <th>قدم اصلی</th>
+                <th>قدم فعلی</th>
+                <th>تقرر ابتدایی</th>
+                <th>روز</th>
+                <th>ماه</th>
+                <th>سال</th>
+                <th>عنوان بست</th>
+                <th>ریاست مربوط</th>
+                <th>معینت</th>
+                <th>مرکزی ولایتی</th>
+                <th>مامور کارکن</th>
+                <th>جنسیت</th>
+                <th>درجه تحصیل</th>
+                <th>رشته تحصیل</th>
+                <th>ماش</th>
+                <th>ربع مقرری</th>
+                <th>سال مقرری</th>
+                <th>پر خالی</th>
+                <th>سال تولد</th>
+                <th>ربع ارزیابی</th>
+                <th>ارزیابی امتحانی</th>
+                <th>ربع ارزیابی امتحانی</th>
+                <th>تاریخ ارزیابی</th>
+                <th>شماره تماس</th>
+                <th>نوع معاش</th>
+                <th>مقداری معاش</th>
+                <th>تاریخ معاش</th>
+                <th>ماه اخذ معاش</th>
+                <th>ملاحضات</th>
+
+            </tr>
+        </tfoot>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr id="@item.id">
+                <td><a class="btn btn-sm btn-success" href="@Url.Action("Arzyaabi","Home",new { area = "", id=item.id })">رسانده ارزیابی</a></td>
+                <td><a class="btn btn-sm btn-warning" href="@Url.Action("Edit","Home",new { area = "", id=item.id })">@item.id</a></td>
+                <td>@item.name</td>
+                <td>@item.fname</td>
+                <td>@item.gfname</td>
+                <td>@item.bast</td>
+                <td>@item.qadamasli</td>
+                <td>@item.qadampeli</td>
+                <td>@item.taqaroribtidayi</td>
+                <td>@item.rooz</td>
+                <td>@item.maah</td>
+                <td>@item.saal</td>
+                <td>@item.inwaanbast</td>
+                <td>@item.reyasatmarboot</td>
+                <td>@item.mooyinat</td>
+                <td>@item.markaziwalayati</td>
+                <td>@item.mamoorkaarkon</td>
+                <td>@item.jinsiyat</td>
+                <td>@item.darajatahseel</td>
+                <td>@item.reshtatahseel</td>
+                <td>@item.maash</td>
+                <td>@item.roobamoqarari</td>
+                <td>@item.saalmoqarari</td>
+                <td>@item.poorkhaali</td>
+                <td>@item.saaltawalood</td>
+                <td>@item.roobarzyaabi</td>
+                <td>@item.arzyaabiimtehaani</td>
+                <td>@item.roobarzyaabiimtehaani</td>
+                <td>@item.tarikharzyaabi</td>
+                <td>@item.shoomratamaas</td>
+                <td>@item.nawimaash</td>
+                <td>@item.meeqdarmaash</td>
+                <td>@item.tarikhakhzmaash</td>
+                <td>@item.maahakhzmaash</td>
+                <td>@item.molahezat</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="@Url.Action("Edit","Home",new { area = "", id=item.id })">Edit</a>
+                            <a class="dropdown-item" href="@Url.Action("Delete","Home",new { area = "", id=item.id })">Delete</a>
+                            <a class="dropdown-item" href="@Url.Action("Details","Home",new { area = "", id = item.id })">Details</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            }
+            @if (Model.Count() == 0)
+            {
+                <tr>
+                    <th colspan="11">
+                        No data found.
+                    </th>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

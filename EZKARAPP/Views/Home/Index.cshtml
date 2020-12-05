@@ -1,0 +1,37 @@
+﻿@model EZKARAPP.Models.taskhil
+@{
+    ViewBag.Title = "Tashkil List";
+    ViewBag.DataTable = true;
+}
+<hr class="mb-2" />
+<h6>@ViewBag.Title (Employees)</h6>
+<hr class="mt-2" />
+
+<div>
+    @Html.ValidationSummary(null, new { @class = "text-danger" })
+    <div class="card no-radius shadow-sm">
+        <div id="data-table">
+            Loading data . . .
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+
+        function loadDataTable() {
+            $("#data-table").load('@Url.Action("_ListPeople","Home")', {},
+                function (responseText, textStatus, req) {
+                if (textStatus == 'error') {
+                    $(this).html('Error loading data, please try again, if problem persists please contact system administrator.');
+                } else {
+                    $("#people-data-table").DataTable();
+                }
+                });
+        }
+
+        $(document).ready(function () {
+            loadDataTable();
+        });
+    </script>
+}

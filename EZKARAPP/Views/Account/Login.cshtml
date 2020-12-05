@@ -1,0 +1,79 @@
+﻿@using EZKARAPP.Models
+@model LoginViewModel
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN .::EZKAR::.</title>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body style="background:#0072C6">
+    <div class="">
+        <div class="">
+            <div class="mt-sm-4 mt-md-5">
+                @*<div class="col-12 mt-2 text-center">
+                        <img src="~/Images/ezkar.png" style="height:150px;width:150px;" />
+                    </div>*@
+                <div class="col-12 col-sm-6 col-md-4 offset-md-4 mt-3 mt-sm-2 mt-lg-3">
+                    <div class="card shadow-lg no-radius">
+                        <div class="card-header text-center pt-0 pb-0">
+                            <img src="~/Images/ezkar.png" style="height:150px;width:150px;" />
+                        </div>
+                        <div class="card-body ">
+                            <section id="loginForm">
+                                <p>
+                                    <span class="font-weight-bold">Sign in</span> <br /> to continue
+                                </p>
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <div class="">
+                                        @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-sm", @required = "required" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "invalid-feedback" })
+                                    </div>
+                                    <div class="">
+                                        @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-sm", @required = "required" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "invalid-feedback" })
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check-inline">
+                                            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-check-input" })
+                                            @Html.LabelFor(m => m.RememberMe, new { @class = "form-check-label" })
+                                        </div>
+
+                                    </div>
+                                    <div class="">
+                                        <input type="submit" value="   Log in   " class="btn btn-primary btn-block" />
+                                    </div>
+                                }
+                            </section>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Developed by: EZKAR/MIS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js")
+    @Scripts.Render("~/bundles/jqueryval")
+</body>
+</html>

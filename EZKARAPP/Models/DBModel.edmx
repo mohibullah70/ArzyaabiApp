@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="arzyaabi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="taskhkilid" Type="int" Nullable="false" />
+          <Property Name="roobarzyaabi" Type="nvarchar(max)" />
+          <Property Name="irteqaamozeshwaelaanbast" Type="nvarchar(max)" />
+          <Property Name="arzaabishoda" Type="nvarchar(max)" />
+          <Property Name="noomraarzyaabi" Type="nvarchar(max)" />
+          <Property Name="tarikharzyaabi" Type="nvarchar(max)" />
+          <Property Name="molahezaat" Type="nvarchar(max)" />
+          <Property Name="createddate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PersonId" Type="int" />
+          <Property Name="Flag" Type="bit" Nullable="false" />
+          <Property Name="MustChangePassword" Type="bit" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="taskhil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="fname" Type="nvarchar(max)" />
+          <Property Name="gfname" Type="nvarchar(max)" />
+          <Property Name="bast" Type="nvarchar(max)" />
+          <Property Name="qadamasli" Type="nvarchar(max)" />
+          <Property Name="qadampeli" Type="nvarchar(max)" />
+          <Property Name="taqaroribtidayi" Type="nvarchar(max)" />
+          <Property Name="rooz" Type="nvarchar(max)" />
+          <Property Name="maah" Type="nvarchar(max)" />
+          <Property Name="saal" Type="nvarchar(max)" />
+          <Property Name="inwaanbast" Type="nvarchar(max)" />
+          <Property Name="reyasatmarboot" Type="nvarchar(max)" />
+          <Property Name="mooyinat" Type="nvarchar(max)" />
+          <Property Name="markaziwalayati" Type="nvarchar(max)" />
+          <Property Name="mamoorkaarkon" Type="nvarchar(max)" />
+          <Property Name="jinsiyat" Type="nvarchar(max)" />
+          <Property Name="darajatahseel" Type="nvarchar(max)" />
+          <Property Name="reshtatahseel" Type="nvarchar(max)" />
+          <Property Name="maash" Type="nvarchar(max)" />
+          <Property Name="roobamoqarari" Type="nvarchar(max)" />
+          <Property Name="saalmoqarari" Type="nvarchar(max)" />
+          <Property Name="poorkhaali" Type="nvarchar(max)" />
+          <Property Name="saaltawalood" Type="nvarchar(max)" />
+          <Property Name="roobarzyaabi" Type="nvarchar(max)" />
+          <Property Name="arzyaabiimtehaani" Type="nvarchar(max)" />
+          <Property Name="roobarzyaabiimtehaani" Type="nvarchar(max)" />
+          <Property Name="tarikharzyaabi" Type="nvarchar(max)" />
+          <Property Name="shoomratamaas" Type="nvarchar(max)" />
+          <Property Name="nawimaash" Type="nvarchar(max)" />
+          <Property Name="meeqdarmaash" Type="nvarchar(max)" />
+          <Property Name="tarikhakhzmaash" Type="nvarchar(max)" />
+          <Property Name="maahakhzmaash" Type="nvarchar(max)" />
+          <Property Name="molahezat" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_arzyaabi_taskhil">
+          <End Role="taskhil" Type="Self.taskhil" Multiplicity="1" />
+          <End Role="arzyaabi" Type="Self.arzyaabi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="taskhil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="arzyaabi">
+              <PropertyRef Name="taskhkilid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="arzyaabi" EntityType="Self.arzyaabi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="taskhil" EntityType="Self.taskhil" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_arzyaabi_taskhil" Association="Self.FK_arzyaabi_taskhil">
+            <End Role="taskhil" EntitySet="taskhil" />
+            <End Role="arzyaabi" EntitySet="arzyaabi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="arzyaabi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="taskhkilid" Type="Int32" Nullable="false" />
+          <Property Name="roobarzyaabi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="irteqaamozeshwaelaanbast" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="arzaabishoda" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="noomraarzyaabi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tarikharzyaabi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="molahezaat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="createddate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="taskhil" Relationship="Self.FK_arzyaabi_taskhil" FromRole="arzyaabi" ToRole="taskhil" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PersonId" Type="Int32" />
+          <Property Name="Flag" Type="Boolean" Nullable="false" />
+          <Property Name="MustChangePassword" Type="Boolean" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="taskhil">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gfname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bast" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qadamasli" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qadampeli" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="taqaroribtidayi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rooz" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="maah" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="saal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="inwaanbast" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reyasatmarboot" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mooyinat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="markaziwalayati" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mamoorkaarkon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="jinsiyat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="darajatahseel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="reshtatahseel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="maash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="roobamoqarari" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="saalmoqarari" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="poorkhaali" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="saaltawalood" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="roobarzyaabi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="arzyaabiimtehaani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="roobarzyaabiimtehaani" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tarikharzyaabi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="shoomratamaas" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nawimaash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="meeqdarmaash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tarikhakhzmaash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="maahakhzmaash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="molahezat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="arzyaabis" Relationship="Self.FK_arzyaabi_taskhil" FromRole="taskhil" ToRole="arzyaabi" />
+        </EntityType>
+        <Association Name="FK_arzyaabi_taskhil">
+          <End Role="taskhil" Type="Self.taskhil" Multiplicity="1" />
+          <End Role="arzyaabi" Type="Self.arzyaabi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="taskhil">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="arzyaabi">
+              <PropertyRef Name="taskhkilid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="arzyaabis" EntityType="Self.arzyaabi" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="taskhils" EntityType="Self.taskhil" />
+          <AssociationSet Name="FK_arzyaabi_taskhil" Association="Self.FK_arzyaabi_taskhil">
+            <End Role="taskhil" EntitySet="taskhils" />
+            <End Role="arzyaabi" EntitySet="arzyaabis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="arzyaabis">
+            <EntityTypeMapping TypeName="DBModel.arzyaabi">
+              <MappingFragment StoreEntitySet="arzyaabi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="taskhkilid" ColumnName="taskhkilid" />
+                <ScalarProperty Name="roobarzyaabi" ColumnName="roobarzyaabi" />
+                <ScalarProperty Name="irteqaamozeshwaelaanbast" ColumnName="irteqaamozeshwaelaanbast" />
+                <ScalarProperty Name="arzaabishoda" ColumnName="arzaabishoda" />
+                <ScalarProperty Name="noomraarzyaabi" ColumnName="noomraarzyaabi" />
+                <ScalarProperty Name="tarikharzyaabi" ColumnName="tarikharzyaabi" />
+                <ScalarProperty Name="molahezaat" ColumnName="molahezaat" />
+                <ScalarProperty Name="createddate" ColumnName="createddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="DBModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="DBModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="DBModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="DBModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="MustChangePassword" ColumnName="MustChangePassword" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="taskhils">
+            <EntityTypeMapping TypeName="DBModel.taskhil">
+              <MappingFragment StoreEntitySet="taskhil">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="gfname" ColumnName="gfname" />
+                <ScalarProperty Name="bast" ColumnName="bast" />
+                <ScalarProperty Name="qadamasli" ColumnName="qadamasli" />
+                <ScalarProperty Name="qadampeli" ColumnName="qadampeli" />
+                <ScalarProperty Name="taqaroribtidayi" ColumnName="taqaroribtidayi" />
+                <ScalarProperty Name="rooz" ColumnName="rooz" />
+                <ScalarProperty Name="maah" ColumnName="maah" />
+                <ScalarProperty Name="saal" ColumnName="saal" />
+                <ScalarProperty Name="inwaanbast" ColumnName="inwaanbast" />
+                <ScalarProperty Name="reyasatmarboot" ColumnName="reyasatmarboot" />
+                <ScalarProperty Name="mooyinat" ColumnName="mooyinat" />
+                <ScalarProperty Name="markaziwalayati" ColumnName="markaziwalayati" />
+                <ScalarProperty Name="mamoorkaarkon" ColumnName="mamoorkaarkon" />
+                <ScalarProperty Name="jinsiyat" ColumnName="jinsiyat" />
+                <ScalarProperty Name="darajatahseel" ColumnName="darajatahseel" />
+                <ScalarProperty Name="reshtatahseel" ColumnName="reshtatahseel" />
+                <ScalarProperty Name="maash" ColumnName="maash" />
+                <ScalarProperty Name="roobamoqarari" ColumnName="roobamoqarari" />
+                <ScalarProperty Name="saalmoqarari" ColumnName="saalmoqarari" />
+                <ScalarProperty Name="poorkhaali" ColumnName="poorkhaali" />
+                <ScalarProperty Name="saaltawalood" ColumnName="saaltawalood" />
+                <ScalarProperty Name="roobarzyaabi" ColumnName="roobarzyaabi" />
+                <ScalarProperty Name="arzyaabiimtehaani" ColumnName="arzyaabiimtehaani" />
+                <ScalarProperty Name="roobarzyaabiimtehaani" ColumnName="roobarzyaabiimtehaani" />
+                <ScalarProperty Name="tarikharzyaabi" ColumnName="tarikharzyaabi" />
+                <ScalarProperty Name="shoomratamaas" ColumnName="shoomratamaas" />
+                <ScalarProperty Name="nawimaash" ColumnName="nawimaash" />
+                <ScalarProperty Name="meeqdarmaash" ColumnName="meeqdarmaash" />
+                <ScalarProperty Name="tarikhakhzmaash" ColumnName="tarikhakhzmaash" />
+                <ScalarProperty Name="maahakhzmaash" ColumnName="maahakhzmaash" />
+                <ScalarProperty Name="molahezat" ColumnName="molahezat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="DBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

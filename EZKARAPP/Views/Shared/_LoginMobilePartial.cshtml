@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNet.Identity;
+
+@{
+        var username = User.Identity.GetUserName();
+        var atIndex = username.IndexOf('@');
+        if (atIndex > 0)
+        {
+            username = username.Substring(0, atIndex);
+        }
+}
+
+<div class="d-md-block d-lg-none ml-auto">
+
+
+    <ul class="navbar-nav mr-5" style="flex-direction:row !important">
+
+        <li class="nav-item dropdown pr-5">
+            <a class="nav-link dropdown-toggle dropdown-toggle-no-carret" role="button" data-toggle="dropdown" href="#">
+                <span class="oi oi-bell font-weight-bold"></span>&nbsp;&nbsp;<span class="badge badge-danger rounded-circle notification-badge-count"></span>
+            </a>
+            <div class="dropdown-menu shadow-sm no-radius dropdown-menu-right" aria-labelledby="user-dropdown" style="position:absolute !important;right:0 !important;left: auto">
+
+                <h5 class="dropdown-header text-center"> . . . . . . : : : : : : New Notifications : : : : : : . . . . . . </h5>
+                <div class="dropdown-divider"></div>
+                <div class="notification-dropdown-area list-group">
+                    <a href="#" class="dropdown-item disabled"><span class="text-muted">no new notifications</span></a>
+                </div>
+                <div class="dropdown-divider"></div>
+                <a href="@Url.Action("Index","Notifications",new { area=""})" class="dropdown-item">see all</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown pr-4">
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+                <span class="oi oi-person"></span>
+            </a>
+            <div class="dropdown-menu shadow-sm no-radius dropdown-menu-right" aria-labelledby="user-dropdown" style="position:absolute !important;right:0 !important;left: auto">
+
+                <h5 class="dropdown-header">Hi @username</h5>
+                <div class="dropdown-divider"></div>
+                <a href="@Url.Action("ChangePassword", "Manage", new { area = "" })" class="dropdown-item"> <span class="oi oi-cog"></span>&nbsp; Change Password</a>
+                <a href="javascript:document.getElementById('logoutForm').submit()" class="dropdown-item"><span class="oi oi-account-logout"></span>&nbsp; Log off</a>
+
+            </div>
+        </li>
+
+    </ul>
+</div>
